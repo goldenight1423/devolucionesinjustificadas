@@ -1,0 +1,7 @@
+node_modules
+npm-debug.log
+test_data.json
+.git
+.gitignore
+ejemplo_input.json
+README.md
