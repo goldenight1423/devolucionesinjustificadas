@@ -1,0 +1,40 @@
+{
+  "devoluciones": [
+    {
+      "guia": "124011574657",
+      "orden": "84309825",
+      "transportadora": "ENVIA",
+      "contador_novedades": "1",
+      "novedad": "Direccion incorrecta",
+      "fue_solucionada": "SI",
+      "solucion": "Se contacto al cliente",
+      "fecha_novedad": "2026-07-20",
+      "fecha_solucion": "2026-07-21",
+      "fecha_devolucion": "2026-07-25"
+    },
+    {
+      "guia": "WCO2000871212",
+      "orden": "81406620",
+      "transportadora": "INTERRAPIDISIMO",
+      "contador_novedades": "2",
+      "novedad": "Doble novedad",
+      "fue_solucionada": "SI",
+      "solucion": "Se resolvio",
+      "fecha_novedad": "2026-07-18",
+      "fecha_solucion": "2026-07-19",
+      "fecha_devolucion": "2026-07-22"
+    },
+    {
+      "guia": "014160983515",
+      "orden": "81419037",
+      "transportadora": "ENVIA",
+      "contador_novedades": "0",
+      "novedad": "",
+      "fue_solucionada": "NO",
+      "solucion": "",
+      "fecha_novedad": "",
+      "fecha_solucion": "",
+      "fecha_devolucion": ""
+    }
+  ]
+}
