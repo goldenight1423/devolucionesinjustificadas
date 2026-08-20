@@ -69,19 +69,19 @@ function evaluarGuia(devolucion) {
     const diffTiempo = solucion.getTime() - novedad.getTime();
     const diffDias = Math.round(diffTiempo / (1000 * 60 * 60 * 24));
 
-    // R006 - Devolución el mismo día de la solución
-    if (devolucion.getTime() === solucion.getTime()) {
-      return {
-        resultado: 'REVISIÓN MANUAL',
-        motivo: 'Devolución el mismo día de la solución'
-      };
-    }
-
     // R004 - Solución fuera del tiempo permitido
     if (diffDias > 1) {
       return {
         resultado: 'NO INVESTIGABLE',
         motivo: 'Solución superior a 1 día'
+      };
+    }
+
+    // R006 - Devolución el mismo día de la solución
+    if (devolucion.getTime() === solucion.getTime()) {
+      return {
+        resultado: 'REVISIÓN MANUAL',
+        motivo: 'Devolución el mismo día de la solución'
       };
     }
   }
