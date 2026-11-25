@@ -97,20 +97,34 @@ POST /api/devoluciones
 
 | Variable | Valor |
 |----------|-------|
-| `PORT` | `3000` |
+| `SERVICIO_TOKEN` | **Obligatoria**: token Bearer de los llamadores. Sin ella la API no arranca |
+| `HOST` | `127.0.0.1` por defecto. La imagen Docker fija `0.0.0.0` |
+| `PORT` | `3000` por defecto |
 
 ### Ejecución local
 
 ```bash
 npm install
-npm start
+SERVICIO_TOKEN=<token> npm start
 ```
 
 ### Docker
 
 ```bash
 docker build -t devoluciones-api .
-docker run -p 3000:3000 devoluciones-api
+docker run -p 3000:3000 -e SERVICIO_TOKEN=<token> devoluciones-api
+```
+
+## Autenticación
+
+`POST /api/devoluciones` exige `Authorization: Bearer <SERVICIO_TOKEN>`, el mismo mecanismo que enviascraping y seguimientocapp. Sin cabecera, con otro token o con otro esquema responde `401`. La comparación es en tiempo constante. `GET /api/health` no exige token.
+
+Las reglas de evaluación (R001–R006) no cambian. La API no guarda resultados.
+
+## Pruebas
+
+```bash
+npm test
 ```
 
 ## Health check
